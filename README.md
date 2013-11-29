@@ -1,6 +1,6 @@
 # Resolve
 
-TODO: Write a gem description
+Simplified Ruby library for handling HTTP requests and responses.
 
 ## Installation
 
@@ -18,7 +18,22 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Directly
+
+    response = Resolve.get 'http://example.com'
+    puts response.code   # => 200
+
+### Classy
+
+    class BBC::TravelNews
+      attr_accessor :page
+      include Resolve
+
+      def initialize
+        @page = get 'http://www.bbc.co.uk/travelnews'
+      end
+    end
+
 
 ## Contributing
 
