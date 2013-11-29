@@ -1,5 +1,5 @@
 module Resolve
-  module Request
+  class Request
 
     def get(uri)
       http = Net::HTTP.new uri.host, uri.port
