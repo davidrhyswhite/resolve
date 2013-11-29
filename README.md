@@ -6,7 +6,9 @@ Simplified Ruby library for handling HTTP requests and responses.
 
 Add this line to your application's Gemfile:
 
-    gem 'resolve'
+```ruby
+gem 'resolve'
+```
 
 And then execute:
 
@@ -20,20 +22,23 @@ Or install it yourself as:
 
 ### Directly
 
-    response = Resolve.get 'http://example.com'
-    puts response.code   # => 200
+```ruby
+response = Resolve.get 'http://example.com'
+puts response.code   # => 200
+```
 
 ### Classy
 
-    class BBC::TravelNews
-      attr_accessor :page
-      include Resolve
+```ruby
+class BBC::TravelNews
+  attr_accessor :page
+  include Resolve
 
-      def initialize
-        @page = get 'http://www.bbc.co.uk/travelnews'
-      end
-    end
-
+  def initialize
+    @page = get 'http://www.bbc.co.uk/travelnews'
+  end
+end
+```
 
 ## Contributing
 
