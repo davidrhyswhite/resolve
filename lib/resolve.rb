@@ -4,6 +4,7 @@ require 'net/http'
 module Resolve
 
   autoload :Request, 'resolve/request'
+  autoload :Response, 'resolve/response'
 
   [:get].each do |method|
     metaclass = class << self; self; end

@@ -3,7 +3,8 @@ module Resolve
 
     def get(uri)
       http = Net::HTTP.new uri.host, uri.port
-      http.request Net::HTTP::Get.new(uri.request_uri)
+      response = http.request Net::HTTP::Get.new(uri.request_uri)
+      Resolve::Response.new response
     end
 
   end
