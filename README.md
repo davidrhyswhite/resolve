@@ -24,7 +24,9 @@ Or install it yourself as:
 
 ```ruby
 response = Resolve.get 'http://example.com'
-puts response.code   # => 200
+puts response.code          # => 200
+puts response.status.to_s   # => "OK"
+puts response.status.to_sym # => :ok
 ```
 
 ### Classy
