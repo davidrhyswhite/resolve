@@ -41,11 +41,23 @@ class BBC::TravelNews
   end
 end
 ```
+## Testing
+
+Since this library is dependent on making HTTP / HTTPS requests to external resources, a small Rack application has been bundled in to simplify testing.
+
+Before running any tests ensure you run:
+
+    rackup test/server.ru
+
+Running the tests is as simple as:
+
+    rake test
 
 ## Contributing
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+3. Ensure you have sufficiently tested your changes and all tests pass (`rake test`)
+4. Commit your changes (`git commit -am 'Add some feature'`)
+5. Push to the branch (`git push origin my-new-feature`)
+6. Create new Pull Request
