@@ -1,9 +1,12 @@
 module Resolve
   class Response
-    attr_accessor :net_response
+    autoload :Status, 'resolve/response/status'
+
+    attr_accessor :net_response, :status
 
     def initialize(net_response)
       @net_response = net_response
+      @status = Status.new code
     end
 
     def code
